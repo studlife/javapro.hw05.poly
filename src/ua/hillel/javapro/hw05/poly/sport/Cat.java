@@ -5,6 +5,12 @@ public class Cat extends Participant{
     public Cat(String name) {
         super(name);
     }
+    public Cat(String name, int length, int width) {
+        super(name);
+        this.length = length;
+        this.width = width;
+    }
+
 
     @Override
     public void run() {

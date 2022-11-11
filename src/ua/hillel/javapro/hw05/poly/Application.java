@@ -73,6 +73,24 @@ public class Application {
         }
 
 
+        System.out.println(" - - - - - 2 * part  - - - - - - ");
+
+
+        Participant[] particArray = {
+                new Human("Vova", 300, 2),
+                new Cat("Murka", 400, 1),
+                new Robot("Wall-e", 100, 3)
+        };
+        Obstacle[] obstArray = {new Racetrack(200), new Wall(2)};
+
+
+
+        for (Obstacle o : obstArray) {
+            for (Participant p : particArray) {
+                if(p.isStatus()) o.newOvercome(p);
+            }
+        }
+
     }
 
 }

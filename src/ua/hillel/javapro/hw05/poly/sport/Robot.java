@@ -5,6 +5,13 @@ public class Robot extends Participant {
     public Robot(String name) {
         super(name);
     }
+    public Robot(String name, int length, int width) {
+        super(name);
+        this.length = length;
+        this.width = width;
+    }
+
+
 
     @Override
     public void run() {
