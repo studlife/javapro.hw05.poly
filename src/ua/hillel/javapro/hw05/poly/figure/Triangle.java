@@ -6,16 +6,22 @@ public class Triangle implements Geometric {
     private double sideB;
     private double sideC;
 
-    public Triangle(double sideA, double sideB, double sideC) {
-
-        if(sideA >= (sideB + sideC) || sideB >= (sideA + sideC) || sideC >= (sideA + sideB)) {
-            System.out.println("Трикутник з такими параметрами не може існувати!");
-            // Але я не розумію що тут треба заробити...
-        }
+    private Triangle(double sideA, double sideB, double sideC) {
 
         this.sideA = sideA;
         this.sideB = sideB;
         this.sideC = sideC;
+    }
+
+    public static Triangle getInstance(double sideA, double sideB, double sideC) {
+        if(sideA >= (sideB + sideC) || sideB >= (sideA + sideC) || sideC >= (sideA + sideB)) {
+            System.out.println("Трикутник з такими параметрами не може існувати!");
+            return null;
+        } else if (!(sideA > 0) || !(sideB > 0) || !(sideC > 0)) {
+            System.out.println("Сторона не можу буту рівна 0, або бути негативною");
+            return null;
+        }
+        return new Triangle(sideA, sideB, sideC);
     }
 
 
