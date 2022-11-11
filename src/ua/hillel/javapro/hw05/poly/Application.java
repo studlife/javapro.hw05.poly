@@ -3,6 +3,7 @@ package ua.hillel.javapro.hw05.poly;
 import ua.hillel.javapro.hw05.poly.figure.*;
 import ua.hillel.javapro.hw05.poly.sport.*;
 
+
 public class Application {
 
     public static void main(String[] args) {
@@ -12,7 +13,7 @@ public class Application {
 
         Circle figure1 = new Circle(2.5);
         Square figure2 = new Square(2, 2);
-        Triangle figure3 = new Triangle(6, 4, 8);
+        Triangle figure3 = Triangle.getInstance(6, 4, 8);
 
         System.out.println(figure1.area());
         System.out.println(figure2.area());
@@ -25,7 +26,7 @@ public class Application {
 
         Geometric figure4 = new Circle(5);
         Geometric figure5 = new Square(5.5, 5.5);
-        Geometric figure6 = new Triangle(2, 3, 4);
+        Geometric figure6 = Triangle.getInstance(2, 3, 4);
 
         Geometric[] array = {figure4, figure5, figure6};
 
@@ -92,5 +93,4 @@ public class Application {
         }
 
     }
-
 }
